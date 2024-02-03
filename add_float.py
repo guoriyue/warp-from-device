@@ -4,8 +4,9 @@ import warp as wp
 wp.init()
 device = "cuda"
 
+
 @wp.kernel
-def add_float_arrays(dest: wp.array(dtype=wp.float32),
+def add_float(dest: wp.array(dtype=wp.float32),
              a: wp.array(dtype=wp.float32),
              b: wp.array(dtype=wp.float32)):
 
@@ -14,10 +15,8 @@ def add_float_arrays(dest: wp.array(dtype=wp.float32),
 
 
 
-def example_add_float_arrays(device, n):
-   
+def example_add_float(device, n):
     dest = wp.zeros(n=n, dtype=wp.float32, device=device)
-   
     a = wp.array(np.linspace(0.5, 0.9, n), dtype=wp.float32, device=device)
     b = wp.array(np.linspace(100, 110, n), dtype=wp.float32, device=device)
     print("dir(a)=", dir(a))

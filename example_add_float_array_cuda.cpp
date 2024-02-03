@@ -333,3 +333,5 @@ int main(int argc, char* argv[])
 }
 
 // ./example_add_float_array_cuda /home/eecs/zhen/.cache/warp/0.11.0/bin/wp___main__.sm70.ptx
+
+// fatbinary --create="/rscratch/zhendong/mfguo/warp/warp_cpp/wp___main__.fatbin" --image3=kind=ptx,file=/home/eecs/zhen/.cache/warp/0.11.0/bin/wp___main__.sm70.ptx,sm=70

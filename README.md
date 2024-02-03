@@ -1,3 +1,4 @@
+
 # warp_cpp
 Examples calling [NVIDIA Warp](https://github.com/nvidia/warp) precompiled (cached) kernels directly from C++ (without Python)
 
@@ -12,6 +13,13 @@ cd warp
 python build_lib.py --cuda_path=/usr/local/warp
 pip install -e .
 ```
+
+
+```
+mkdir cache
+export CACHE_PATH=cache/
+```
+
 example_add_float_array.py has this Warp kernel:
 ```
 @wp.kernel
