@@ -10,7 +10,7 @@
 .target sm_70
 .address_size 64
 
-// .global	add_float_arrays_cuda_kernel_forward
+// .global	add_float_arrays_cuda_kernel_forward;
 .global .align 4 .b8 pnanovdb_grid_type_value_strides_bits[76] = {0, 0, 0, 0, 32, 0, 0, 0, 64, 0, 0, 0, 16, 0, 0, 0, 32, 0, 0, 0, 64, 0, 0, 0, 96, 0, 0, 0, 192, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 32, 0, 0, 0, 1, 0, 0, 0, 32, 0, 0, 0, 4, 0, 0, 0, 8, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 1, 0, 0};
 .global .align 4 .b8 pnanovdb_grid_type_table_strides_bits[76] = {64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 128, 0, 0, 0, 192, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 64, 0, 0, 0, 128, 0, 0, 0, 0, 1, 0, 0};
 .global .align 4 .b8 pnanovdb_grid_type_minmax_strides_bits[76] = {0, 0, 0, 0, 32, 0, 0, 0, 64, 0, 0, 0, 16, 0, 0, 0, 32, 0, 0, 0, 64, 0, 0, 0, 96, 0, 0, 0, 192, 0, 0, 0, 8, 0, 0, 0, 16, 0, 0, 0, 32, 0, 0, 0, 8, 0, 0, 0, 32, 0, 0, 0, 32, 0, 0, 0, 32, 0, 0, 0, 32, 0, 0, 0, 32, 0, 0, 0, 128, 0, 0, 0, 0, 1, 0, 0};
@@ -89,7 +89,7 @@ $L__BB0_3:
 	ret;
 
 }
-// .global	add_float_arrays_cuda_kernel_backward
+// .global	add_float_arrays_cuda_kernel_backward;
 .visible .entry add_float_arrays_cuda_kernel_backward(
 	.param .align 8 .b8 add_float_arrays_cuda_kernel_backward_param_0[32],
 	.param .align 8 .b8 add_float_arrays_cuda_kernel_backward_param_1[56],

@@ -1,4 +1,4 @@
-#include "warp/native/builtin.h"
+#include "warp/warp/native/builtin.h"
 
 #include <iostream>
 #include <fstream>
@@ -166,8 +166,8 @@ struct CudaVector
 int main(int argc, char* argv[])
 {
 
-    const char* ptx_filename = "C:/Users/erwin/AppData/Local/NVIDIA Corporation/warp/Cache/0.8.2/bin/wp___main__.sm70.ptx";
-
+    // const char* ptx_filename = "C:/Users/erwin/AppData/Local/NVIDIA Corporation/warp/Cache/0.8.2/bin/wp___main__.sm70.ptx";
+    const char* ptx_filename = "/rscratch/zhendong/mfguo/warp/warp_cpp/wp___main__.sm70.ptx";
     if (argc > 1)
     {
         ptx_filename = argv[1];
@@ -303,6 +303,7 @@ int main(int argc, char* argv[])
 
     // Set up kernel arguments
     void* args[] = { &bounds_cuda, &var_dest , &var_a, &var_b };
+    // void* args[] = { &var_dest , &var_a, &var_b };
 
     int numThreadsPerBlock = 256;
     int numPairsPerBlock = numThreadsPerBlock / 4;
@@ -335,3 +336,6 @@ int main(int argc, char* argv[])
 // ./example_add_float_array_cuda /home/eecs/zhen/.cache/warp/0.11.0/bin/wp___main__.sm70.ptx
 
 // fatbinary --create="/rscratch/zhendong/mfguo/warp/warp_cpp/wp___main__.fatbin" --image3=kind=ptx,file=/home/eecs/zhen/.cache/warp/0.11.0/bin/wp___main__.sm70.ptx,sm=70
+
+
+// fatbinary --create="easy_ptx.fatbin" --image3=kind=ptx,file=easy_ptx.ptx,sm=70
